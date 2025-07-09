@@ -99,7 +99,7 @@ export default function Hero() {
                 className="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full transition-all duration-300 hover:scale-110">
                 <Phone size={20} />
               </Link>
-              <Link href="/resume.pdf" target="_blank"
+              <Link href="https://drive.google.com/file/d/1y_Vt67aEqN_XBRCNz2cExgVTpmL2vSp7/view?usp=sharing" target="_blank"
                 className="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full transition-all duration-300 hover:scale-110">
                 <FileText size={20} />
               </Link>
