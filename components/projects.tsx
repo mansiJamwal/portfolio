@@ -15,7 +15,7 @@ const projectsData = [
       "Secure Access: User authentication and authorization powered by Next-Auth.",
     ],
     techStack: ["Next.js", "Tailwind CSS", "Postgres", "Turborepo", "Prisma", "Express"],
-    status: "Ongoing",
+    status: "June 2025",
     github: "https://github.com/mansiJamwal",
     live: "https://smart-wallet-user-app.vercel.app",
   },

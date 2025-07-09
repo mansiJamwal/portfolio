@@ -2,13 +2,15 @@
 
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
-import { Briefcase } from "lucide-react"
+import { Briefcase, ExternalLink } from "lucide-react"
+import Link from "next/link"
 
 const experienceData = [
   {
     company: "AtoInfinity Hub",
     position: "Technical Intern",
     duration: "Jan 2025",
+    link: "https://atoinfinityhub.com", // Add your actual link here
     description: [
       "Independently developed and deployed the company's website using Next.js, ensuring a modern, responsive, and user-friendly interface.",
       "Managed the entire development lifecycle, from design to deployment, showcasing strong problem-solving and time-management skills.",
@@ -24,13 +26,13 @@ export default function Experience() {
   })
 
   return (
-    <section id="experience" className="py-20">
+    <section id="experience" className="relative py-24 bg-gray-950 overflow-hidden">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-pink-500 to-blue-500 text-transparent bg-clip-text"
+          className="text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-pink-500 to-blue-500 text-transparent bg-clip-text"
         >
           Experience
         </motion.h2>
@@ -39,16 +41,16 @@ export default function Experience() {
           <motion.div
             ref={ref}
             initial={{ opacity: 0, y: 50 }}
-            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
-            className="space-y-8"
+            className="space-y-10"
           >
             {experienceData.map((item, index) => (
               <motion.div
                 key={index}
                 whileHover={{ y: -5 }}
                 transition={{ duration: 0.3 }}
-                className="bg-gray-900 p-6 rounded-lg shadow-lg border border-gray-800 hover:border-blue-500/30"
+                className="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800 hover:border-blue-500/30 transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
                   <div className="bg-gradient-to-r from-blue-500 to-pink-500 p-3 rounded-lg">
@@ -56,7 +58,14 @@ export default function Experience() {
                   </div>
                   <div className="flex-1">
                     <div className="flex justify-between items-start flex-wrap">
-                      <h3 className="text-xl font-semibold text-white">{item.company}</h3>
+                      <h3 className="text-xl font-semibold text-white flex items-center gap-2">
+                        {item.company}
+                        {item.link && (
+                          <Link href={item.link} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink size={18} className="text-blue-400 hover:text-pink-400" />
+                          </Link>
+                        )}
+                      </h3>
                       <span className="text-pink-400 font-medium">{item.duration}</span>
                     </div>
                     <p className="text-gray-300 mt-1">{item.position}</p>
