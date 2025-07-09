@@ -9,7 +9,7 @@ const educationData = [
     institution: "Indian Institute of Technology",
     degree: "Integrated Dual-Degree - Computer Science and Engineering",
     duration: "2023 - 2028",
-    gpa: "GPA: 9.74/10.0",
+    gpa: "GPA: 9.70/10.0",
     icon: School,
   },
   {

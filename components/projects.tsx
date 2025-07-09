@@ -11,13 +11,13 @@ const projectsData = [
     description:
       "This project replicates essential PayTM functionalities, enabling users to manage transactions, check account balances, and interact with others efficiently.",
     features: [
-      "Seamless Transactions: Send money, view account balances, and search for other users.",
-      "Secure Access: User authentication and authorization powered by JWT.",
+      "Seamless Transactions: Send money via P2P transfers, view account balances, and transfer money from bank account.",
+      "Secure Access: User authentication and authorization powered by Next-Auth.",
     ],
-    techStack: ["Next.js", "Tailwind CSS", "Postgres", "Monorepo"],
+    techStack: ["Next.js", "Tailwind CSS", "Postgres", "Turborepo", "Prisma", "Express"],
     status: "Ongoing",
     github: "https://github.com/mansiJamwal",
-    live: null,
+    live: "https://smart-wallet-user-app.vercel.app",
   },
   {
     title: "Charcha: Real-Time Chat Application",
@@ -47,7 +47,7 @@ const projectsData = [
     techStack: ["React", "JavaScript", "MongoDB", "Express.js", "Recoil"],
     status: "March 2024",
     github: "https://github.com/mansiJamwal",
-    live: null,
+    live: "https://todo-website-one.vercel.app",
   },
   {
     title: "The 2048 game",
